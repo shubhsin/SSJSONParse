@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A31B199D199D38A3005E2B7E /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = A31B199C199D38A3005E2B7E /* MBProgressHUD.m */; };
 		A34B282D199B7BC0009890D3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A34B282C199B7BC0009890D3 /* Foundation.framework */; };
 		A34B282F199B7BC0009890D3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A34B282E199B7BC0009890D3 /* CoreGraphics.framework */; };
 		A34B2831199B7BC0009890D3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A34B2830199B7BC0009890D3 /* UIKit.framework */; };
@@ -21,6 +22,7 @@
 		A34B284E199B7BC0009890D3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A34B2830199B7BC0009890D3 /* UIKit.framework */; };
 		A34B2856199B7BC0009890D3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A34B2854199B7BC0009890D3 /* InfoPlist.strings */; };
 		A34B2858199B7BC0009890D3 /* SSJSONParseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A34B2857199B7BC0009890D3 /* SSJSONParseTests.m */; };
+		A34B2863199B7BE6009890D3 /* SSJSONModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A34B2862199B7BE6009890D3 /* SSJSONModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A31B199B199D38A3005E2B7E /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MBProgressHUD.h; path = ../MBProgressHUD.h; sourceTree = "<group>"; };
+		A31B199C199D38A3005E2B7E /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MBProgressHUD.m; path = ../MBProgressHUD.m; sourceTree = "<group>"; };
 		A34B2829199B7BC0009890D3 /* SSJSONParse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SSJSONParse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A34B282C199B7BC0009890D3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A34B282E199B7BC0009890D3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -53,6 +57,8 @@
 		A34B2853199B7BC0009890D3 /* SSJSONParseTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SSJSONParseTests-Info.plist"; sourceTree = "<group>"; };
 		A34B2855199B7BC0009890D3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A34B2857199B7BC0009890D3 /* SSJSONParseTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSJSONParseTests.m; sourceTree = "<group>"; };
+		A34B2861199B7BE6009890D3 /* SSJSONModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSJSONModel.h; sourceTree = "<group>"; };
+		A34B2862199B7BE6009890D3 /* SSJSONModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSJSONModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,7 +88,8 @@
 		A34B2820199B7BC0009890D3 = {
 			isa = PBXGroup;
 			children = (
-				A34B2832199B7BC0009890D3 /* SSJSONParse */,
+				A34B2864199B7BEF009890D3 /* SSJSONParse */,
+				A34B2832199B7BC0009890D3 /* SSJSON */,
 				A34B2851199B7BC0009890D3 /* SSJSONParseTests */,
 				A34B282B199B7BC0009890D3 /* Frameworks */,
 				A34B282A199B7BC0009890D3 /* Products */,
@@ -109,7 +116,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		A34B2832199B7BC0009890D3 /* SSJSONParse */ = {
+		A34B2832199B7BC0009890D3 /* SSJSON */ = {
 			isa = PBXGroup;
 			children = (
 				A34B283B199B7BC0009890D3 /* SSAppDelegate.h */,
@@ -118,8 +125,11 @@
 				A34B2841199B7BC0009890D3 /* SSViewController.h */,
 				A34B2842199B7BC0009890D3 /* SSViewController.m */,
 				A34B2844199B7BC0009890D3 /* Images.xcassets */,
+				A31B199B199D38A3005E2B7E /* MBProgressHUD.h */,
+				A31B199C199D38A3005E2B7E /* MBProgressHUD.m */,
 				A34B2833199B7BC0009890D3 /* Supporting Files */,
 			);
+			name = SSJSON;
 			path = SSJSONParse;
 			sourceTree = "<group>";
 		};
@@ -150,6 +160,15 @@
 				A34B2854199B7BC0009890D3 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A34B2864199B7BEF009890D3 /* SSJSONParse */ = {
+			isa = PBXGroup;
+			children = (
+				A34B2861199B7BE6009890D3 /* SSJSONModel.h */,
+				A34B2862199B7BE6009890D3 /* SSJSONModel.m */,
+			);
+			name = SSJSONParse;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -198,7 +217,7 @@
 			attributes = {
 				CLASSPREFIX = SS;
 				LastUpgradeCheck = 0510;
-				ORGANIZATIONNAME = Apps2eaze;
+				ORGANIZATIONNAME = LUGManipal;
 				TargetAttributes = {
 					A34B2849199B7BC0009890D3 = {
 						TestTargetID = A34B2828199B7BC0009890D3;
@@ -251,6 +270,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A34B2843199B7BC0009890D3 /* SSViewController.m in Sources */,
+				A34B2863199B7BE6009890D3 /* SSJSONModel.m in Sources */,
+				A31B199D199D38A3005E2B7E /* MBProgressHUD.m in Sources */,
 				A34B283D199B7BC0009890D3 /* SSAppDelegate.m in Sources */,
 				A34B2839199B7BC0009890D3 /* main.m in Sources */,
 			);
@@ -457,6 +478,7 @@
 				A34B285D199B7BC0009890D3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A34B285E199B7BC0009890D3 /* Build configuration list for PBXNativeTarget "SSJSONParseTests" */ = {
 			isa = XCConfigurationList;
@@ -465,6 +487,7 @@
 				A34B2860199B7BC0009890D3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
