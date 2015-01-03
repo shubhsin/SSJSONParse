@@ -13,7 +13,7 @@ Mostly meant for begineer iOS Developers.
 jsonInstance1 =[[SSJSONModel alloc] initWithDelegate:self];
 [jsonInstance1 sendRequestWithUrl:@"your url"];
 ```
-4. Implement this method
+And implement this method
 ```objective-c
 - (void)jsonRequestDidCompleteWithDict:(NSDictionary *)dict model:(SSJSONModel *)JSONModel
 {
