@@ -23,7 +23,7 @@ NSLog(@"dict is %@",jsonInstance1.parsedJsonData);
 }
 }
 ```
-*Your jsonInstance1.parsedJsonData is the data you need. Assign it to a NSDictionary or NSArray instance according to whatever your data type is.
+*Your `jsonInstance1.parsedJsonData` is the data you need. Assign it to a NSDictionary or NSArray instance according to whatever your data type is.
 
 
 
