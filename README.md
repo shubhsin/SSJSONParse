@@ -5,7 +5,7 @@ Mostly meant for begineer iOS Developers.
 
 ##Usage
 
-1. Add the file SSJSONModel.h and SSJSONModel.m in your Xcode project.
+1. Add the file SSJSONModel.h and SSJSONModel.m in your Xcode project.Add `<SSJSONModel>` in your protocols.
 2. `#import SSJSONModel.h` in your ViewController file where you need the JSON Data.
 3. Make an instance of SSJSONModel
 ```objective-c
