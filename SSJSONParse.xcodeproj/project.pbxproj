@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A31B199D199D38A3005E2B7E /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = A31B199C199D38A3005E2B7E /* MBProgressHUD.m */; };
 		A34B282D199B7BC0009890D3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A34B282C199B7BC0009890D3 /* Foundation.framework */; };
 		A34B282F199B7BC0009890D3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A34B282E199B7BC0009890D3 /* CoreGraphics.framework */; };
 		A34B2831199B7BC0009890D3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A34B2830199B7BC0009890D3 /* UIKit.framework */; };
@@ -36,8 +35,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		A31B199B199D38A3005E2B7E /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MBProgressHUD.h; path = ../MBProgressHUD.h; sourceTree = "<group>"; };
-		A31B199C199D38A3005E2B7E /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MBProgressHUD.m; path = ../MBProgressHUD.m; sourceTree = "<group>"; };
 		A34B2829199B7BC0009890D3 /* SSJSONParse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SSJSONParse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A34B282C199B7BC0009890D3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A34B282E199B7BC0009890D3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -125,8 +122,6 @@
 				A34B2841199B7BC0009890D3 /* SSViewController.h */,
 				A34B2842199B7BC0009890D3 /* SSViewController.m */,
 				A34B2844199B7BC0009890D3 /* Images.xcassets */,
-				A31B199B199D38A3005E2B7E /* MBProgressHUD.h */,
-				A31B199C199D38A3005E2B7E /* MBProgressHUD.m */,
 				A34B2833199B7BC0009890D3 /* Supporting Files */,
 			);
 			name = SSJSON;
@@ -271,7 +266,6 @@
 			files = (
 				A34B2843199B7BC0009890D3 /* SSViewController.m in Sources */,
 				A34B2863199B7BE6009890D3 /* SSJSONModel.m in Sources */,
-				A31B199D199D38A3005E2B7E /* MBProgressHUD.m in Sources */,
 				A34B283D199B7BC0009890D3 /* SSAppDelegate.m in Sources */,
 				A34B2839199B7BC0009890D3 /* main.m in Sources */,
 			);

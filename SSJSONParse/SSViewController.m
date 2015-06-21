@@ -3,7 +3,7 @@
 //  SSJSONParse
 //
 //  Created by Shubham Sorte on 13/08/14.
-//  Copyright (c) 2014 Apps2eaze. All rights reserved.
+//  Copyright (c) 2014 LUGManipal. All rights reserved.
 //
 
 #import "SSViewController.h"
@@ -24,10 +24,9 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-
-    self.view.backgroundColor = [UIColor redColor];
-    NSURL *mainUrl = [NSURL URLWithString:@"http://shubhapple.site50.net/Event.plist"];
-     NSURL *mainUrl2 = [NSURL URLWithString:@"http://shubhapple.site50.net/Event.plist"];
+    _checkConsoleLabel.hidden = YES;
+    NSURL *mainUrl = [NSURL URLWithString:@"https://api.github.com/users/shubhsin"];
+     NSURL *mainUrl2 = [NSURL URLWithString:@"https://google.com"];
     jsonInstance1 =[[SSJSONModel alloc] initWithDelegate:self];
     [jsonInstance1 sendRequestWithUrl:mainUrl];
     jsonInstance2 = [[SSJSONModel alloc]initWithDelegate:self];
@@ -35,7 +34,7 @@
     
 }
 
-- (void)jsonRequestDidCompleteWithDict:(NSDictionary *)dict model:(SSJSONModel *)JSONModel
+-(void)jsonRequestDidCompleteWithResponse:(id)response model:(SSJSONModel *)JSONModel
 {
     if(JSONModel == jsonInstance1)
     {
@@ -44,10 +43,10 @@
     else if (JSONModel == jsonInstance2)
     {
         NSLog(@"dict 2 is %@",jsonInstance2.parsedJsonData);
-
     }
-}
+    _checkConsoleLabel.hidden = NO;
 
+}
 
 - (void)didReceiveMemoryWarning
 {

@@ -3,15 +3,15 @@
 //  SSJSONParse
 //
 //  Created by Shubham Sorte on 13/08/14.
-//  Copyright (c) 2014 Apps2eaze. All rights reserved.
+//  Copyright (c) 2014 LUGManipal. All rights reserved.
 //
 
 #import "SSJSONModel.h"
-#import "MBProgressHUD.h"
 
 @interface SSJSONModel(){
     
     NSMutableData * responseData;
+    NSURL * currentUrl;
 }
 
 @end
@@ -29,7 +29,7 @@
 -(void)sendRequestWithUrl:(NSURL*)Url
 {
     NSURLRequest * request = [NSURLRequest requestWithURL:Url];
-    
+    currentUrl = Url;
     // Create url connection and fire request
     NSURLConnection *conn = [[NSURLConnection alloc] initWithRequest:request delegate:self];
     [conn start];
@@ -54,10 +54,25 @@
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection {
     // The request is complete and data has been received
     // You can parse the stuff in your instance variable now
-    
     _parsedJsonData = [NSJSONSerialization JSONObjectWithData:responseData options:kNilOptions error:nil];
     
-    [self.delegate jsonRequestDidCompleteWithDict:_parsedJsonData model:self];
+    //Check for Valid JSON
+    if (_parsedJsonData == nil) {
+        NSLog(@"For %@ ,the response is not a valid JSON\nCheck your URL or API response over a browser",(NSString*)currentUrl);
+    }
+    
+    //Check for JSON Array or Object
+    else{
+        if ([_parsedJsonData isKindOfClass:[NSArray class]]) {
+            NSLog(@"For %@ ,the Response JSON Data is an Array.\nAssign it to a NSArray",(NSString*)currentUrl);
+        }
+        else if([_parsedJsonData isKindOfClass:[NSDictionary class]]) {
+            NSLog(@"For %@ ,the Response JSON Data is a JSON Object or Dicitionary.\nAssign it to a NSDictionary",(NSString*)currentUrl);
+        }
+        
+        [self.delegate jsonRequestDidCompleteWithResponse:_parsedJsonData model:self];
+    }
+
 }
 
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {

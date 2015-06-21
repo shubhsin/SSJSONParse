@@ -3,6 +3,11 @@
 Its the simplest library for parsing JSON Array or Dictionary.
 Mostly meant for begineer iOS Developers.
 
+##Features
+
+1. Parse JSON data in only 3 lines.
+2. The library also tells you whether the response is a valid JSON, if it is then whether its an object or an array.
+
 ##Usage
 
 1. Add the file SSJSONModel.h and SSJSONModel.m in your Xcode project.
@@ -10,17 +15,17 @@ Mostly meant for begineer iOS Developers.
 3. Make an instance of SSJSONModel
 ```objective-c
     SSJSONModel * jsonInstance1;
-jsonInstance1 =[[SSJSONModel alloc] initWithDelegate:self];
-[jsonInstance1 sendRequestWithUrl:@"your url"];
+jsonInstance =[[SSJSONModel alloc] initWithDelegate:self];
+[jsonInstance sendRequestWithUrl:@"your url"];
 ```
 4. Implement this method
 ```objective-c
-- (void)jsonRequestDidCompleteWithDict:(NSDictionary *)dict model:(SSJSONModel *)JSONModel
+-(void)jsonRequestDidCompleteWithResponse:(id)response model:(SSJSONModel *)JSONModel
 {
-if(JSONModel == jsonInstance1)
-{
-NSLog(@"dict is %@",jsonInstance1.parsedJsonData);
-}
+    if(JSONModel == jsonInstance1)
+    {
+        NSLog(@"dict is %@",jsonInstance.parsedJsonData);
+    }
 }
 
 *Your jsonInstance1.parsedJsonData is the data you need. Assign it to a NSDictionary or NSArray instance according to whatever your data type is.
