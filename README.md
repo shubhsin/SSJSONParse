@@ -27,6 +27,10 @@ And implement this method
         NSLog(@"dict is %@",jsonInstance.parsedJsonData);
     }
 }
+<<<<<<< HEAD
+=======
+}
+>>>>>>> 900c74f5552a7d97c174fa650874488409fa6b29
 ```
 *Your `jsonInstance1.parsedJsonData` is the data you need. Assign it to a NSDictionary or NSArray instance according to whatever your data type is.
 
